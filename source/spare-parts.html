@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Volvo-cars project">
+  <title>Volvo Cars</title>
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <link rel="preload" href="fonts/volvo-novum-light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/volvo-novum-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/volvo-novum-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/volvo-novum-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="container">
+        <div class="main-header">
+          <div class="main-header__base">
+            <a href="index.html">
+              <svg width="104" height="8" viewBox="0 0 104 8" role="img">
+                <use href="img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <button type="button" data-button="open" onclick="openMenu()">
+              Меню
+            </button>
+          </div>
+          <div class="main-header__navigation" id="sidebar">
+            <div class="main-header__navigation-button">
+              <a href="index.html">
+                <svg width="104" height="8" viewBox="0 0 104 8" role="img">
+                  <use href="img/sprite.svg#logo"></use>
+                </svg>
+              </a>
+              <button type="button" data-button="close" onclick="closeMenu()">
+                <span class="visually-hidden">Закрыть меню.</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" role="img">
+                  <use href="img/sprite.svg#cross"></use>
+                </svg>
+              </button>
+            </div>
+            <ul class="main-header__navigation-list">
+              <li>
+                <a href="control.html">
+                  Volvo ID
+                </a>
+              </li>
+              <li>
+                <a href="support.html">
+                  Поддержка и руководства
+                </a>
+              </li>
+              <li>
+                <a href="assistance.html">
+                  Volvo Assistance
+                </a>
+              </li>
+              <li>
+                <a href="about.html">
+                  О компании
+                </a>
+              </li>
+              <li>
+                <a href="https://www.privilegeclub.ru/map/">
+                  Дилеры и сервисные партнеры
+                </a>
+              </li>
+              <li>
+                <a href="information.html">
+                  Информация для СМИ
+                </a>
+              </li>
+              <li>
+                <a href="club.html">
+                  Privilege Club
+                </a>
+              </li>
+              <li>
+                <a href="personal-service.html">
+                  Персональный сервис
+                </a>
+              </li>
+              <li>
+                <a href="volvo-service.html">
+                  Volvo Service 2.0
+                </a>
+              </li>
+              <li>
+                <a href="service-request.html">
+                  Запрос на сервисное обслуживание
+                </a>
+              </li>
+              <li>
+                <a href="legacy.html">
+                  Наследие
+                </a>
+              </li>
+              <li>
+                <a href="safety.html">
+                  Безопасность
+                </a>
+              </li>
+              <li>
+                <a href="ecology.html">
+                  Экологичность
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="message">
+        <div class="container">
+          <div class="message__wrapper">
+            <p>
+              Автомобили Volvo недоступны для заказа. В настоящее время импорт новых автомобилей в РФ временно
+              не&nbsp;осуществляется.
+            </p>
+            <button type="button" data-button="close-message" onclick="closeMessage()">
+              <span class="visually-hidden">Закрыть сообщение.</span>
+              <svg width="24" height="24" viewBox="0 0 24 24" role="img">
+                <use href="img/sprite.svg#cross"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="hero">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" width="324" height="390"
+            srcset="./img/content/assistance-desktop@1x.webp 1x, ./img/content/assistance-desktop@2x.webp 2x">
+          <source type="image/webp" width="324" height="390"
+            srcset="./img/content/assistance@1x.webp 1x, ./img/content/assistance@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 1440px)" width="324" height="390"
+            srcset="./img/content/assistance-desktop@1x.webp 1x, ./img/content/assistance-desktop@2x.webp 2x">
+          <img src="./img/content/assistance@1x.png" width="288" height="215"
+            srcset="./img/content/assistance@2x.png 2x" alt="">
+        </picture>
+        <div class="container">
+          <div class="hero__text-wrapper">
+            <p>Гарантированная поддержка Volvo на запасные части</p>
+            <h2>Поддержка Volvo</h2>
+          </div>
+        </div>
+      </section>
+      <section class="content">
+        <div class="container">
+          <h2 class="title-lowcase">Качество и уверенность</h2>
+          <p class="content__extra-text">
+            Гарантированная поддержка на запасные части, оригинальные детали Volvo*, приобретенные и установленные у официального дилера и партнера, обеспечивается поддержкой производителя в случае дефектов до 10 лет, пока вы являетесь владельцем данного автомобиля.
+          </p>
+          <div class="assistance__text-block">
+            * Срок действия программы распространяется на запасные части, приобретённые и установленные у официального дилера или сервисного партнёра Volvo до 22.04.2022 включительно. Срок действия программы с 01.01.2020. Действие программы приостановлено с 23.04.2022.
+          </div>
+          <div class="content__wrapper-content">
+            <picture>
+              <source type="image/webp" width="676" height="507" srcset="./img/content/spare-parts/1.webp">
+              <img src="./img/content/spare-parts/1.png" width="676" height="507" alt="">
+            </picture>
+            <div>
+              <h3>Для вашего спокойствия</h3>
+              <p class="content__text">Если вы проводите обслуживание автомобиля у официального дилера, вы получаете право на гарантированную поддержку на запасные части. Таким образом, доверяя ремонт своего Volvo нашим специалистам с использованием оригинальных запасных частей, вы гарантируете себе дополнительное спокойствие независимо от пробега вашего автомобиля.</p>
+              <a class="transparent-button" href="https://www.privilegeclub.ru/map/">Дилеры и сервисные партнеры</a>
+            </div>
+          </div>
+          <div class="content__wrapper-content grid-reverse">
+            <picture>
+              <source type="image/webp" width="676" height="507" srcset="./img/content/spare-parts/2.webp">
+              <img src="./img/content/spare-parts/2.png" width="676" height="507" alt="">
+            </picture>
+            <div>
+              <h3>У дилеров и сервисных партнеров</h3>
+              <p class="content__extra-title">Volvo Cars</p>
+              <p class="content__text">
+                Покупая и устанавливая запасные части у официальных дилеров или сервисных партнеров Volvo, вы получите гарантированную поддержку на оригинальные детали Volvo на время владения автомобилем. В рамках программы мы заменим или отремонтируем вышедшую из строя деталь. Поддержка действует до 10 лет и включает в себя работу по замене покрываемой* программой запасной части.
+              </p>
+              <a class="transparent-button" href="https://www.privilegeclub.ru/map/">Условия программы</a>
+            </div>
+          </div>
+          <div class="assistance__text-block">
+            * Поддержка не покрывает аксессуары, подверженные естественному износу детали и расходные материалы. Не покрываются детали, требующие замены в результате какого-либо внешнего воздействия. Чтобы ознакомиться с полными условиями и списком исключений, перейдите по ссылке выше.
+          </div>
+        </div>
+      </section>
+      <section class="questions">
+        <div class="container">
+          <h2 class="title-lowcase--extra">Часто задаваемые вопросы по программе</h2>
+          <p class="content__extra-text">Гарантированная поддержка Volvo на запасные части:</p>
+          <ul class="accordion" data-accordion="parent">
+            <li class="accordion__element" data-accordion="element">
+              <div class="accordion__container">
+                <button class="accordion__button" type="button" data-accordion="button" aria-label="Open.">
+                  <div class="accordion__text-wrapper">
+                    <p>Что такое программа гарантированной поддержки Volvo на запасные части?</p>
+                  </div>
+                  <svg width="22" height="12" viewBox="0 0 22 12" role="img">
+                    <use href="img/sprite.svg#arrow-accordion"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="accordion__content" data-accordion="content">
+                <div class="accordion__wrapper">
+                  <p class="accordion__text-content">
+                    text
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="accordion__element" data-accordion="element">
+              <div class="accordion__container">
+                <button class="accordion__button" type="button" data-accordion="button" aria-label="Open.">
+                  <div class="accordion__text-wrapper">
+                    <p>Как долго действует обязательство изготовителя по устранению недостатков в рамках данной программы?</p>
+                  </div>
+                  <svg width="22" height="12" viewBox="0 0 22 12" role="img">
+                    <use href="img/sprite.svg#arrow-accordion"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="accordion__content" data-accordion="content">
+                <div class="accordion__wrapper">
+                  <p class="accordion__text-content">
+                    Срок действия дополнительного обязательства — с момента истечения гарантийного срока на запасную часть до окончания 10-летнего срока с момента приобретения и установки запасной части у официального дилера Volvo. Дополнительное обязательство прекращается досрочно при продаже автомобиля другому лицу (смене владельца).
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="accordion__element" data-accordion="element">
+              <div class="accordion__container">
+                <button class="accordion__button" type="button" data-accordion="button" aria-label="Open.">
+                  <div class="accordion__text-wrapper">
+                    <p>Что такое программа гарантированной поддержки Volvo на запасные части?</p>
+                  </div>
+                  <svg width="22" height="12" viewBox="0 0 22 12" role="img">
+                    <use href="img/sprite.svg#arrow-accordion"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="accordion__content" data-accordion="content">
+                <div class="accordion__wrapper">
+                  <p class="accordion__text-content">
+                    text
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="accordion__element" data-accordion="element">
+              <div class="accordion__container">
+                <button class="accordion__button" type="button" data-accordion="button" aria-label="Open.">
+                  <div class="accordion__text-wrapper">
+                    <p>Что такое программа гарантированной поддержки Volvo на запасные части?</p>
+                  </div>
+                  <svg width="22" height="12" viewBox="0 0 22 12" role="img">
+                    <use href="img/sprite.svg#arrow-accordion"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="accordion__content" data-accordion="content">
+                <div class="accordion__wrapper">
+                  <p class="accordion__text-content">
+                    text
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="accordion__element" data-accordion="element">
+              <div class="accordion__container">
+                <button class="accordion__button" type="button" data-accordion="button" aria-label="Open.">
+                  <div class="accordion__text-wrapper">
+                    <p>Что такое программа гарантированной поддержки Volvo на запасные части?</p>
+                  </div>
+                  <svg width="22" height="12" viewBox="0 0 22 12" role="img">
+                    <use href="img/sprite.svg#arrow-accordion"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="accordion__content" data-accordion="content">
+                <div class="accordion__wrapper">
+                  <p class="accordion__text-content">
+                    text
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="content">
+        <div class="container">
+          <div class="notes__text-block">
+            * Программа не распространяется на случаи естественного изменения внешнего вида или цвета в ходе нормального устаревания при эксплуатации (например, обивка сидений, молдинги, рассеиватели фар головного света, лобовые стекла). Эта программа не распространяется на любые простои, неудобства, потери при транспортировке или любые косвенные повреждения, которые вы (или кто‑либо другой) может понести в результате дефекта, покрываемого данной программой.<br>
+** Volvo не несёт ответственность за проведение любых работ по ремонту и замене, необходимость которых является результатом:<br>
+• нормального износа;<br>
+• ошибок в надлежащем обслуживании автомобиля согласно схеме обслуживания и сервисным инструкциям;<br>
+• использования деталей и жидкостей, не оговорённых техническими спецификациями Volvo;<br>
+• повреждений вследствие пренебрежительного или неправильного использования либо аварии;<br>
+• любых изменений, внесённых в автомобиль или его системы, в частности тюнинга двигателя или подвески, не разрешённых изготовителем автомобиля;<br>
+• смешивания различных видов топлива или использования нерекомендованного топлива; это распространяется на все двигатели.<br>
+          </div>
+        </div>
+      </section>
+      <section class="fast-links">
+        <div class="container">
+          <p class="title-lowcase--extra">Другие предложения по сервису</p>
+          <ul>
+            <li>
+              <a href="volvo-service.html">
+                Volvo Serviсe 2.0
+              </a>
+              <svg width="9" height="15" viewBox="0 0 9 15" role="img">
+                <use href="img/sprite.svg#arrow-go-to"></use>
+              </svg>
+            </li>
+            <li>
+              <a href="assistance.html">
+                Персональный сервис Volvo
+              </a>
+              <svg width="9" height="15" viewBox="0 0 9 15" role="img">
+                <use href="img/sprite.svg#arrow-go-to"></use>
+              </svg>
+            </li>
+            <li>
+              <a href="https://www.privilegeclub.ru/map/">
+                Дилеры и сервисные партнёры
+              </a>
+              <svg width="9" height="15" viewBox="0 0 9 15" role="img">
+                <use href="img/sprite.svg#arrow-go-to"></use>
+              </svg>
+            </li>
+          </ul>
+        </div>
+
+      </section>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="container">
+          <ul class="footer__list">
+            <li>
+              <a href="#">
+                Cookies
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Юридическая информация
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Политика конфиденциальности персональных данных на веб-сайтах ООО «Вольво Карс»
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Политика обработки и защиты персональных данных
+              </a>
+            </li>
+          </ul>
+          <p class="footer__copyright">
+            Copyright © 2024 Volvo Car Corporation (либо ее филиалы или лицензиары).
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function openMenu() {
+      document.getElementById('sidebar').classList.add('active');
+      document.querySelector('.wrapper').classList.add('dark');
+    }
+    function closeMenu() {
+      document.getElementById('sidebar').classList.remove('active');
+      document.querySelector('.wrapper').classList.remove('dark');
+    }
+    function closeMessage() {
+      document.querySelector('.message').style.opacity = '0';
+      setTimeout(deleteMessage, 400);
+
+      function deleteMessage() {
+        document.querySelector('.message').remove();
+      }
+    }
+  </script>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

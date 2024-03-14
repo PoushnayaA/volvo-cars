@@ -1,0 +1,132 @@
+.links__list {
+  padding: 41px 0 64px;
+
+  @include vp-768 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 72px 0;
+  }
+
+  @include vp-1440 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 24px;
+    padding: 72px 0;
+  }
+
+  li p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    height: max-content;
+    margin: 24px 0 24px;
+
+    @include vp-1440 {
+      margin-bottom: 32px;
+    }
+  }
+
+  li a {
+    color: $color-blue;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 22px;
+    display: block;
+
+    svg {
+      fill: $color-blue;
+      margin-left: 3px;
+    }
+
+    @include vp-1440 {
+      margin-top: 32px;
+    }
+  }
+
+  li img {
+    // @include vp-1440 {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    object-position: 30% 30%;
+    // }
+  }
+}
+
+
+.links-add {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @include vp-768 {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  li a {
+    color: $color-blue;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 22px;
+    display: block;
+    margin: 10px 0;
+
+    svg {
+      fill: $color-blue;
+      margin-left: 3px;
+    }
+
+    @include vp-1440 {
+      margin-top: 32px;
+    }
+  }
+}
+
+a[disabled] {
+  color: $color-black !important;
+}
+
+.text-block {
+  padding: 30px 0;
+}
+
+.links-account {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 24px;
+  margin-bottom: 30px;
+
+  @include vp-768 {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    flex-direction: row;
+    gap: 25px;
+  }
+
+  li {
+    width: 100%;
+    background-color: $color-black;
+    border-radius: 4px;
+    padding: 12px 32px;
+
+    @include vp-768 {
+      width: max-content
+    }
+  }
+
+  a {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: $color-default-white;
+    display: block;
+  }
+}

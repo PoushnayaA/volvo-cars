@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Volvo-cars project">
+  <title>Volvo Cars</title>
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <link rel="preload" href="fonts/volvo-novum-light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/volvo-novum-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/volvo-novum-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/volvo-novum-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="container">
+        <div class="main-header">
+          <div class="main-header__base">
+            <a href="index.html">
+              <svg width="104" height="8" viewBox="0 0 104 8" role="img">
+                <use href="img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <button type="button" data-button="open" onclick="openMenu()">
+              Меню
+            </button>
+          </div>
+          <div class="main-header__navigation" id="sidebar">
+            <div class="main-header__navigation-button">
+              <a href="index.html">
+                <svg width="104" height="8" viewBox="0 0 104 8" role="img">
+                  <use href="img/sprite.svg#logo"></use>
+                </svg>
+              </a>
+              <button type="button" data-button="close" onclick="closeMenu()">
+                <span class="visually-hidden">Закрыть меню.</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" role="img">
+                  <use href="img/sprite.svg#cross"></use>
+                </svg>
+              </button>
+            </div>
+            <ul class="main-header__navigation-list">
+              <li>
+                <a href="control.html">
+                  Volvo ID
+                </a>
+              </li>
+              <li>
+                <a href="support.html">
+                  Поддержка и руководства
+                </a>
+              </li>
+              <li>
+                <a href="assistance.html">
+                  Volvo Assistance
+                </a>
+              </li>
+              <li>
+                <a href="about.html">
+                  О компании
+                </a>
+              </li>
+              <li>
+                <a href="https://www.privilegeclub.ru/map/">
+                  Дилеры и сервисные партнеры
+                </a>
+              </li>
+              <li>
+                <a href="information.html">
+                  Информация для СМИ
+                </a>
+              </li>
+              <li>
+                <a href="club.html">
+                  Privilege Club
+                </a>
+              </li>
+              <li>
+                <a href="personal-service.html">
+                  Персональный сервис
+                </a>
+              </li>
+              <li>
+                <a href="volvo-service.html">
+                  Volvo Service 2.0
+                </a>
+              </li>
+              <li>
+                <a href="service-request.html">
+                  Запрос на сервисное обслуживание
+                </a>
+              </li>
+              <li>
+                <a href="legacy.html">
+                  Наследие
+                </a>
+              </li>
+              <li>
+                <a href="safety.html">
+                  Безопасность
+                </a>
+              </li>
+              <li>
+                <a href="ecology.html">
+                  Экологичность
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="message">
+        <div class="container">
+          <div class="message__wrapper">
+            <p>
+              Автомобили Volvo недоступны для заказа. В настоящее время импорт новых автомобилей в РФ временно
+              не&nbsp;осуществляется.
+            </p>
+            <button type="button" data-button="close-message" onclick="closeMessage()">
+              <span class="visually-hidden">Закрыть сообщение.</span>
+              <svg width="24" height="24" viewBox="0 0 24 24" role="img">
+                <use href="img/sprite.svg#cross"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="hero">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" width="324" height="390"
+            srcset="./img/content/assistance-desktop@1x.webp 1x, ./img/content/assistance-desktop@2x.webp 2x">
+          <source type="image/webp" width="324" height="390"
+            srcset="./img/content/assistance@1x.webp 1x, ./img/content/assistance@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 1440px)" width="324" height="390"
+            srcset="./img/content/assistance-desktop@1x.webp 1x, ./img/content/assistance-desktop@2x.webp 2x">
+          <img src="./img/content/assistance@1x.png" width="288" height="215"
+            srcset="./img/content/assistance@2x.png 2x" alt="">
+        </picture>
+        <div class="container">
+          <div class="hero__text-wrapper">
+            <p>Помощь на дорогах</p>
+            <h2>Volvo assistance</h2>
+          </div>
+        </div>
+      </section>
+      <section class="content">
+        <div class="container">
+          <p class="content__pre-title">Действует в России и в большинстве стран Европы.</p>
+          <h2 class="title-lowcase">Услуга «Помощь на дорогах Volvo Assistance»</h2>
+          <p class="content__extra-text">Услуга предоставляет владельцам Volvo оперативную техническую поддержку
+            в пути, как и другие услуги.</p>
+          <div class="content__wrapper-content">
+            <picture>
+              <source type="image/webp" width="676" height="507" srcset="./img/content/assistance/1.webp">
+              <img src="./img/content/assistance/1.png" width="676" height="507" alt="">
+            </picture>
+            <div>
+              <h3>В случае поломки в дороге</h3>
+              <p class="content__extra-title">Вы можете набрать номер службы Volvo Assistance</p>
+              <p class="content__text">Специалисты окажут вам всю необходимую помощь: механики службы заменят
+                пробитое колесо, заправят автомобиль или эвакуируют его в ближайший технический центр Volvo. Услугой
+                также предусмотрены различные удобные опции, например: продолжение поездки другими видами транспорта,
+                размещение в гостинице на время ожидания ремонта вашего Volvo и т.д.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="content">
+        <div class="container">
+          <h2 class="title-lowcase">Как обратиться за услугой «Помощь на дорогах Volvo Assistance»</h2>
+          <p class="content__extra-text">Чтобы обратиться за помощью, например, в случае прокола шины, отсутствия
+            топлива
+            или заряда батареи, вы можете позвонить в контактный центр или нажать кнопку ON CALL непосредственно
+            в автомобиле.</p>
+          <div class="content__wrapper-pictures">
+            <div>
+              <picture>
+                <source type="image/webp" width="397" height="298" srcset="./img/content/assistance/2.webp">
+                <img src="./img/content/assistance/2.png" width="397" height="298" alt="">
+              </picture>
+              <h3 class="assistance__pre-title">Позвонив по телефону</h3>
+              <p class="content__text">Для получения помощи вы можете позвонить в контактный центр Volvo
+                Assistance
+                по телефону: 8&nbsp;800&nbsp;333&#8209;23&#8209;30&nbsp;(звонки из России) или
+                +7&nbsp;495&nbsp;212&#8209;21&#8209;48&nbsp;(звонки из других стран)</p>
+            </div>
+            <div>
+              <picture>
+                <source type="image/webp" width="397" height="298" srcset="./img/content/assistance/3.webp">
+                <img src="./img/content/assistance/3.png" width="397" height="298" alt="">
+              </picture>
+              <h3 class="assistance__pre-title">Нажав кнопку ON CALL в автомобиле</h3>
+              <p class="content__text">Нажмите кнопку ON CALL в потолочной консоли и удерживайте нажатой не менее
+                двух секунд. Система установит голосовой контакт с центром помощи на дорогах Volvo Assistance.</p>
+            </div>
+          </div>
+          <div class="content__wrapper-content grid-reverse">
+            <picture>
+              <source type="image/webp" width="676" height="507" srcset="./img/content/assistance/1.webp">
+              <img src="./img/content/assistance/1.png" width="676" height="507" alt="">
+            </picture>
+            <div>
+              <h3>Виды поддержки в пути</h3>
+              <p class="content__extra-title">Предусмотренные услугой</p>
+            <ul>
+              <li class="content__text">Вся оперативная техническая помощь на дороге</li>
+              <li class="content__text">Эвакуация автомобиля в ближайший сервис или на охраняемую стоянку</li>
+              <li class="content__text">Размещение в отеле на время ремонта Volvo</li>
+              <li class="content__text">Такси до дома или сервиса</li>
+              <li class="content__text">Автомобиль на замену</li>
+              <li class="content__text">Организация продолжения поездки на поезде или самолётом</li>
+              <li class="content__text">Организация доставки отремонтированного Volvo из любой европейской
+                страны
+              </li>
+            </ul>
+            <a class="transparent-button" href="#">Подробнее об услуге</a>
+            </div>
+          </div>
+          <div class="content__wrapper-link">
+            <h3>Как воспользоваться услугой</h3>
+            <picture>
+              <source type="image/webp" width="397" height="298" srcset="./img/content/assistance/5.webp">
+              <img src="./img/content/assistance/5.png" width="1376" height="775" alt="">
+            </picture>
+            <p class="content__text">
+              Вместе с новым Volvo вы бесплатно получаете услугу* «Помощь на дорогах Volvo Assistance» для вашего
+              автомобиля.
+            </p>
+            <a class="transparent-button" href="https://www.privilegeclub.ru/map/">Дилеры и сервисные партнёры</a>
+          </div>
+          <div class="assistance__text-block">
+            * Начиная с модельного 2018 года срок действия услуги составляет 3 года с момента выдачи нового автомобиля,
+            импортированного в РФ ООО «Вольво Карс».<br>
+            Продление услуги «Помощь на дорогах Volvo Assistance» при прохождении регулярного техническое обслуживание
+            у официального дилера ООО «Вольво Карс» приостановлено с 09 декабря 2023 года. Обязательства по действующим
+            сертификатам услуги «Помощь на дорогах Volvo Assistance» исполняются до указанного в сертификате срока.<br>
+            Вы можете приобрести сертификат услуги «Помощь на дорогах Road Side Assistance» у официального дилера
+            или сервисного партнёра ООО «Вольво Карс». Информацию об условиях программы и наличии платного продления
+            уточняйте у дилеров и партнёров.
+          </div>
+          <div class="content__wrapper-content">
+            <picture>
+              <source type="image/webp" width="676" height="507" srcset="./img/content/assistance/6.webp">
+              <img src="./img/content/assistance/6.png" width="676" height="507" alt="">
+            </picture>
+            <div>
+            <h3>Где действует услуга</h3>
+            <p class="assistance__extra-title">«Помощь на дороге Volvo Assistance»</p>
+            <p class="content__text">
+              На территории России услугой «Помощь на дороге Volvo Assistance» можно воспользоваться в радиусе
+              200 км от городов, в которых расположены официальные дилерские центры Volvo или сервисные партнёры
+              ООО «Вольво Карс»*.Программа также действует на всей протяжённости федеральных трасс М10 и Е115.
+            </p>
+          </div>
+          </div>
+          <div class="assistance__text-block">
+            * Если поломка автомобиля произошла на расстоянии более 200 км от ближайшего дилерского центра
+            или сервисного партнёра ООО «Вольво Карс», за исключением федеральных трасс М10 и Е115, то в рамках услуги
+            вам может быть оказана помощь и предоставлена эвакуация до ближайшего дилера, однако данная услуга
+            оплачивается клиентом самостоятельно. Услуга «Помощь на дороге Volvo Assistance» также доступна
+            в большинстве стран Европы.
+          </div>
+        </div>
+      </section>
+      <section class="questions">
+        <div class="container">
+          <p class="content__pre-title">Остались вопросы?</p>
+          <h2 class="title-lowcase">У нас есть ответы</h2>
+          <p class="content__extra-text">Подробнее о программе и услугах вы можете узнать, позвонив нам по телефону</p>
+          <ul class="questions__contacts">
+            <li>
+              <div class="questions__text"><a href="tel:+78003332330">8 800 333-23-30</a></div>
+              <div class="questions__extra-text">(звонки из России и Казахстана)</div>
+            </li>
+            <li>
+              <div class="questions__text"><a href="tel:+74952122148">+7 495 212-21-48</a></div>
+              <div class="questions__extra-text">(звонки из других стран)</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="fast-links">
+        <div class="container">
+          <p class="assistance__extra-title">Быстрые ссылки</p>
+          <ul>
+            <li>
+              <a href="support.html">
+                Поддержка
+              </a>
+              <svg width="9" height="15" viewBox="0 0 9 15" role="img">
+                <use href="img/sprite.svg#arrow-go-to"></use>
+              </svg>
+            </li>
+            <li>
+              <a href="information.html">
+                Информация для СМИ
+              </a>
+              <svg width="9" height="15" viewBox="0 0 9 15" role="img">
+                <use href="img/sprite.svg#arrow-go-to"></use>
+              </svg>
+            </li>
+            <li>
+              <a href="https://www.privilegeclub.ru/map/">
+                Дилеры и сервисные партнёры
+              </a>
+              <svg width="9" height="15" viewBox="0 0 9 15" role="img">
+                <use href="img/sprite.svg#arrow-go-to"></use>
+              </svg>
+            </li>
+            <li>
+              <a href="https://contactus.privilegeclub.ru/">
+                Свяжитесь с нами
+              </a>
+              <svg width="9" height="15" viewBox="0 0 9 15" role="img">
+                <use href="img/sprite.svg#arrow-go-to"></use>
+              </svg>
+            </li>
+          </ul>
+          <div class="assistance__text-block">
+            Изображённые функции и опции могут не входить в стандартное оснащение автомобиля, а также могут быть
+            недоступными для некоторых комплектаций и типов двигателя.
+          </div>
+        </div>
+
+      </section>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="container">
+          <ul class="footer__list">
+            <li>
+              <a href="#">
+                Cookies
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Юридическая информация
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Политика конфиденциальности персональных данных на веб-сайтах ООО «Вольво Карс»
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Политика обработки и защиты персональных данных
+              </a>
+            </li>
+          </ul>
+          <p class="footer__copyright">
+            Copyright © 2024 Volvo Car Corporation (либо ее филиалы или лицензиары).
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function openMenu() {
+      document.getElementById('sidebar').classList.add('active');
+      document.querySelector('.wrapper').classList.add('dark');
+    }
+    function closeMenu() {
+      document.getElementById('sidebar').classList.remove('active');
+      document.querySelector('.wrapper').classList.remove('dark');
+    }
+    function closeMessage() {
+      document.querySelector('.message').style.opacity = '0';
+      setTimeout(deleteMessage, 400);
+
+      function deleteMessage() {
+        document.querySelector('.message').remove();
+      }
+    }
+  </script>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

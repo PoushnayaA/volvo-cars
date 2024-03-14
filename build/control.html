@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Volvo-cars project">
+  <title>Volvo Cars</title>
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <link rel="preload" href="fonts/volvo-novum-light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/volvo-novum-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/volvo-novum-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/volvo-novum-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="container">
+        <div class="main-header">
+          <div class="main-header__base">
+            <a href="index.html">
+              <svg width="104" height="8" viewBox="0 0 104 8" role="img">
+                <use href="img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <button type="button" data-button="open" onclick="openMenu()">
+              Меню
+            </button>
+          </div>
+          <div class="main-header__navigation" id="sidebar">
+            <div class="main-header__navigation-button">
+              <a href="index.html">
+                <svg width="104" height="8" viewBox="0 0 104 8" role="img">
+                  <use href="img/sprite.svg#logo"></use>
+                </svg>
+              </a>
+              <button type="button" data-button="close" onclick="closeMenu()">
+                <span class="visually-hidden">Закрыть меню.</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" role="img">
+                  <use href="img/sprite.svg#cross"></use>
+                </svg>
+              </button>
+            </div>
+            <ul class="main-header__navigation-list">
+              <li>
+                <a href="control.html">
+                  Volvo ID
+                </a>
+              </li>
+              <li>
+                <a href="support.html">
+                  Поддержка и руководства
+                </a>
+              </li>
+              <li>
+                <a href="assistance.html">
+                  Volvo Assistance
+                </a>
+              </li>
+              <li>
+                <a href="about.html">
+                  О компании
+                </a>
+              </li>
+              <li>
+                <a href="https://www.privilegeclub.ru/map/">
+                  Дилеры и сервисные партнеры
+                </a>
+              </li>
+              <li>
+                <a href="information.html">
+                  Информация для СМИ
+                </a>
+              </li>
+              <li>
+                <a href="club.html">
+                  Privilege Club
+                </a>
+              </li>
+              <li>
+                <a href="personal-service.html">
+                  Персональный сервис
+                </a>
+              </li>
+              <li>
+                <a href="volvo-service.html">
+                  Volvo Service 2.0
+                </a>
+              </li>
+              <li>
+                <a href="service-request.html">
+                  Запрос на сервисное обслуживание
+                </a>
+              </li>
+              <li>
+                <a href="legacy.html">
+                  Наследие
+                </a>
+              </li>
+              <li>
+                <a href="safety.html">
+                  Безопасность
+                </a>
+              </li>
+              <li>
+                <a href="ecology.html">
+                  Экологичность
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="message">
+        <div class="container">
+          <div class="message__wrapper">
+            <p>
+              Автомобили Volvo недоступны для заказа. В настоящее время импорт новых автомобилей в РФ временно
+              не&nbsp;осуществляется.
+            </p>
+            <button type="button" data-button="close-message" onclick="closeMessage()">
+              <span class="visually-hidden">Закрыть сообщение.</span>
+              <svg width="24" height="24" viewBox="0 0 24 24" role="img">
+                <use href="img/sprite.svg#cross"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="hero">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" width="324" height="390"
+            srcset="./img/content/control-desktop@1x.webp 1x, ./img/content/control-desktop@2x.webp 2x">
+          <source type="image/webp" width="324" height="390"
+            srcset="./img/content/control@1x.webp 1x, ./img/content/control@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 1440px)" width="324" height="390"
+            srcset="./img/content/control-desktop@1x.webp 1x, ./img/content/control-desktop@2x.webp 2x">
+          <img src="./img/content/control@1x.png" width="288" height="215" srcset="./img/content/control@2x.png 2x"
+            alt="">
+        </picture>
+        <div class="container">
+          <div class="hero__text-wrapper">
+            <p>Volvo ID</p>
+            <h2>Персональный идентификатор</h2>
+          </div>
+        </div>
+      </section>
+      <section class="text-block">
+        <div class="container">
+          <p>
+            Volvo ID - это персональный идентификатор.
+            Персональный регистрационный код, состоящий из имени пользователя и пароля.
+            <br>Volvo ID используется для входа в систему ряда подключаемых услуг и предоставляет доступ к ряду услуг Volvo
+            как в сети, так и в автомобиле.
+          </p>
+          <ul class="links-account">
+            <li>
+              <a
+              href="https://volvoid.eu.volvocars.com/VolvoLogin/login?resumePath=lfg3hCPr5U&client_id=vcarsdotcom&relayFlags={%22hideInfoLink%22%3Atrue}&language=ru&market=RU">
+              Управление Volvo ID
+            </a>
+            </li>
+            <li>
+              <a
+              href="https://volvoid.eu.volvocars.com/VolvoLogin/login?resumePath=lfg3hCPr5U&client_id=vcarsdotcom&relayFlags={%22hideInfoLink%22%3Atrue}&language=ru&market=RU">
+              Создайте свой Volvo ID
+            </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="container">
+          <ul class="footer__list">
+            <li>
+              <a href="#">
+                Cookies
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Юридическая информация
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Политика конфиденциальности персональных данных на веб-сайтах ООО «Вольво Карс»
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Политика обработки и защиты персональных данных
+              </a>
+            </li>
+          </ul>
+          <p class="footer__copyright">
+            Copyright © 2024 Volvo Car Corporation (либо ее филиалы или лицензиары).
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function openMenu() {
+      document.getElementById('sidebar').classList.add('active');
+      document.querySelector('.wrapper').classList.add('dark');
+    }
+    function closeMenu() {
+      document.getElementById('sidebar').classList.remove('active');
+      document.querySelector('.wrapper').classList.remove('dark');
+    }
+    function closeMessage() {
+      document.querySelector('.message').style.opacity = '0';
+      setTimeout(deleteMessage, 400);
+
+      function deleteMessage() {
+        document.querySelector('.message').remove();
+      }
+    }
+  </script>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

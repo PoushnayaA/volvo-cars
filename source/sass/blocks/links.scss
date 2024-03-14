@@ -84,10 +84,25 @@
       margin-top: 32px;
     }
   }
+
+  a {
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+  }
 }
 
 a[disabled] {
   color: $color-black !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none !important;
+  }
 }
 
 .text-block {
@@ -113,10 +128,22 @@ a[disabled] {
     width: 100%;
     background-color: $color-black;
     border-radius: 4px;
-    padding: 12px 32px;
+    border: 1px solid transparent;
 
     @include vp-768 {
       width: max-content
+    }
+  }
+
+  li {
+    a {
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $color-default-white;
+        border-color: $color-black;
+      }
     }
   }
 
@@ -128,5 +155,13 @@ a[disabled] {
     text-align: center;
     color: $color-default-white;
     display: block;
+    padding: 10px 30px;
+    border-radius: 4px;
+
+    &:hover,
+    &:focus,
+    &:active a {
+      color: $color-black;
+    }
   }
 }

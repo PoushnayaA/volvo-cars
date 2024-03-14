@@ -4,7 +4,14 @@
   font-size: 16px;
   font-weight: 500;
   color: $color-black;
-  padding-right: 0;
+  padding-right: 2px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $color-light;
+    border-radius: 4px;
+  }
 }
 
 [data-button="close"] {
@@ -19,6 +26,14 @@
     top: 0;
     left: 0;
     fill: $color-black;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    svg {
+      fill: $color-gray;
+    }
   }
 }
 
@@ -64,7 +79,7 @@
 
 .main-header__navigation-list,
 .main-header__navigation-social-list {
-  padding: 16px;
+  padding: 16px 4px;
 
   @include vp-1440 {
     padding: 16px 24px 24px;
@@ -89,18 +104,25 @@
     }
   }
 
-  li {
-    padding: 8px 0;
+  a {
+    padding: 8px 12px;
 
     @include vp-1440 {
       padding: 12px 0;
     }
 
-    a {
-      width: 100%;
-      display: block;
+    width: 100%;
+    display: block;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-radius: 4px;
+      background-color: $color-light;
     }
   }
+
+
 }
 
 .main-header__navigation-social-list {

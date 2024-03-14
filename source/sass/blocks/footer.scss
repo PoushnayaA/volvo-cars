@@ -33,6 +33,15 @@
     color: $color-black;
     display: block;
   }
+
+  a {
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+  }
 }
 
 .footer__copyright {

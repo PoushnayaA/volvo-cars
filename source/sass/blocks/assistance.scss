@@ -106,7 +106,15 @@
       grid-auto-flow: column;
       gap: 0 36px;
     }
+  }
 
+  a {
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
   }
 }
 

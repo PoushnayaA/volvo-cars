@@ -22,7 +22,15 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', equalizeHeaderHeights);
   window.addEventListener('resize', equalizeHeaderHeights);
 
-  // setTimeout(initAccordions(), 1000);
+  const cookieSetButton = document.querySelector('.cookie-settings');
+  const cookieSubmitButton = document.querySelector('.cookie-submit');
+
+  if (cookieSetButton) {
+    cookieSetButton.addEventListener('click', function () {
+      document.querySelector('.cookie').classList.add('visually-hidden')
+      document.querySelector('.cookie-set').classList.remove('visually-hidden')
+    })
+  }
 
   // ---------------------------------
 

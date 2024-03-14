@@ -42,4 +42,12 @@
     left: 0;
     fill: $color-default-white;
   }
+
+  &:hover,
+  &:focus,
+  &:active {
+    svg {
+      fill: $color-gray;
+    }
+  }
 }

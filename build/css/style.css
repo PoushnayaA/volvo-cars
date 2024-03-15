@@ -1772,7 +1772,8 @@ a[disabled]:hover, a[disabled]:focus, a[disabled]:active {
 
 .form__checkbox .form__checkmark {
   position: absolute;
-  left: 0;
+  right: 0;
+  top: 14px;
   width: 40px;
   height: 24px;
   border-color: #B4B4B8;
@@ -1823,6 +1824,78 @@ input:disabled ~ .form__body {
   color: #bdbdbd;
 }
 
+.cookie .logo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+  margin-bottom: 10px;
+  background-color: #FAFAFA;
+}
+
+.cookie-set .logo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+  margin-bottom: 55px;
+  background-color: #FAFAFA;
+}
+.cookie-set .cookies-form-buttons {
+  background-color: #FAFAFA;
+  padding: 20px;
+  margin-top: 40px;
+}
+.cookie-set .cookies-form-buttons button {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.cookie-set .cookies-form-buttons button:hover, .cookie-set .cookies-form-buttons button:focus, .cookie-set .cookies-form-buttons button:active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.cookie-set .cookies-form-buttons .container form {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+@media (min-width: 768px) {
+  .cookie-set .cookies-form-buttons .container form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 30px;
+  }
+}
 .cookie-set .accordion__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1836,27 +1909,22 @@ input:disabled ~ .form__body {
       -ms-flex-align: center;
           align-items: center;
 }
-
-.cookies__wrapper .logo {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 20px 0;
+.cookie-set .accordion__button svg {
+  margin-left: 0;
+  margin-top: 22px;
 }
+.cookie-set .accordion__text-wrapper p {
+  margin: 15px;
+}
+
 .cookies__wrapper .text {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   color: #5C5C5C;
 }
-.cookies__wrapper .text a {
+.cookies__wrapper .text a,
+.cookies__wrapper .text .accordion__wrapper button {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
@@ -1896,10 +1964,17 @@ input:disabled ~ .form__body {
   transition: all 0.3s;
 }
 
+@media (min-width: 1440px) {
+  .cookie__block {
+    margin-bottom: 33px;
+  }
+}
 .cookie__block .title {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  margin-top: 25px;
+  margin-bottom: 18px;
 }
 .cookie__block .text {
   font-size: 14px;
@@ -1907,10 +1982,16 @@ input:disabled ~ .form__body {
   line-height: 17px;
   color: #5C5C5C;
 }
-.cookie__block a {
+.cookie__block a,
+.cookie__block .accordion__wrapper button {
   color: #2A609D;
+  border: none;
+  background-color: transparent;
 }
-.cookie__block a:hover, .cookie__block a:focus, .cookie__block a:active {
+.cookie__block a:hover, .cookie__block a:focus, .cookie__block a:active,
+.cookie__block .accordion__wrapper button:hover,
+.cookie__block .accordion__wrapper button:focus,
+.cookie__block .accordion__wrapper button:active {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
@@ -1921,6 +2002,56 @@ input:disabled ~ .form__body {
   -webkit-transform: rotate(0) !important;
       -ms-transform: rotate(0) !important;
           transform: rotate(0) !important;
+}
+
+.cookie {
+  width: 100%;
+  max-width: 496px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 4px 0 25px;
+  background-color: #ffffff;
+}
+
+.cookie-set {
+  width: 95%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  overflow-y: auto;
+  position: fixed;
+  max-height: 100vh;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.cookie-set .accordion__text-content,
+.cookie-set .accordion__wrapper button {
+  margin-left: 36px;
+  margin-right: 20px;
+  padding: 0;
+}
+.cookie-set .cookie__block .text {
+  margin-top: 18px;
+}
+.cookie-set .cookie__block .title {
+  margin-bottom: 14px;
+}
+.cookie-set .accordion {
+  margin-top: 10px;
+}
+
+.modal-cookie {
+  position: fixed;
+  max-height: 100vh;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .content h3.assistance__pre-title {
@@ -2220,4 +2351,12 @@ input:disabled ~ .form__body {
   color: #5C5C5C;
   margin: 0;
   padding: 10px 20px 10px;
+}
+
+.footer a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.footer a:hover, .footer a:focus, .footer a:active {
+  color: #5C5C5C;
 }

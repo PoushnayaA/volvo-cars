@@ -35,13 +35,18 @@
 
 .form__checkbox .form__checkmark {
   position: absolute;
-  left: 0;
+  right: 0;
+  top: 14px;
   width: 40px;
   height: 24px;
   border-color: $color-dark-gray;
   background-color: $color-light-gray-2;
   border: 2px solid #bdbdbd;
   border-radius: 12px;
+
+  // @include vp-768 {
+  //   top: 0;
+  // }
 }
 
 .form__checkbox input:disabled~.form__checkmark {
@@ -84,7 +89,65 @@ input:disabled~.form__body {
   color: #bdbdbd;
 }
 
+.cookie {
+  .logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 10px;
+
+    background-color: $color-light;
+  }
+}
+
 .cookie-set {
+  .logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 55px;
+
+    background-color: $color-light;
+  }
+
+  .cookies-form-buttons {
+    background-color: $color-light;
+    padding: 20px;
+    margin-top: 40px;
+
+    button {
+      border: none;
+      background-color: transparent;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+
+      &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+    }
+
+    .container form {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      @include vp-768 {
+        flex-direction: row;
+        gap: 30px;
+      }
+    }
+  }
+
   .accordion__container {
     display: flex;
   }
@@ -92,17 +155,21 @@ input:disabled~.form__body {
   .accordion__button {
     justify-content: flex-start;
     align-items: center;
+
+    svg {
+      margin-left: 0;
+      margin-top: 22px;
+    }
+  }
+
+  .accordion__text-wrapper {
+    p {
+      margin: 15px;
+    }
   }
 }
 
 .cookies__wrapper {
-  .logo {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0;
-  }
 
   .text {
     font-size: 16px;
@@ -110,7 +177,8 @@ input:disabled~.form__body {
     line-height: 24px;
     color: $color-gray;
 
-    a {
+    a,
+    .accordion__wrapper button {
       text-decoration: underline;
       text-underline-offset: 4px;
     }
@@ -136,22 +204,28 @@ input:disabled~.form__body {
       border-radius: 4px;
 
       &:hover,
-    &:focus,
-    &:active {
-      background-color: $color-black;
-      border-color: $color-black;
-      color: $color-default-white;
-      transition: all 0.3s;
-    }
+      &:focus,
+      &:active {
+        background-color: $color-black;
+        border-color: $color-black;
+        color: $color-default-white;
+        transition: all 0.3s;
+      }
     }
   }
 }
 
 .cookie__block {
+  @include vp-1440 {
+    margin-bottom: 33px;
+  }
+
   .title {
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
+    margin-top: 25px;
+    margin-bottom: 18px;
   }
 
   .text {
@@ -161,8 +235,11 @@ input:disabled~.form__body {
     color: $color-gray;
   }
 
-  a {
+  a,
+  .accordion__wrapper button {
     color: $color-blue;
+    border: none;
+    background-color: transparent;
 
     &:hover,
     &:focus,
@@ -181,4 +258,56 @@ input:disabled~.form__body {
       transform: rotate(0) !important;
     }
   }
+}
+
+.cookie {
+  width: 100%;
+  max-width: 496px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 4px 0 25px;
+  background-color: $color-default-white;
+}
+
+.cookie-set {
+  width: 95%;
+  max-width: 800px;
+  margin: 0 auto;
+  // padding: 4px 0 25px;
+  background-color: $color-default-white;
+  overflow-y: auto;
+  position: fixed;
+  max-height: 100vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .accordion__text-content,
+  .accordion__wrapper button {
+    margin-left: 36px;
+    margin-right: 20px;
+    padding: 0;
+  }
+
+  .cookie__block .text {
+    margin-top: 18px;
+  }
+
+  .cookie__block .title {
+    margin-bottom: 14px;
+  }
+
+  .accordion {
+    margin-top: 10px;
+  }
+}
+
+
+.modal-cookie {
+  position: fixed;
+  max-height: 100vh;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

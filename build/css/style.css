@@ -2352,11 +2352,3 @@ input:disabled ~ .form__body {
   margin: 0;
   padding: 10px 20px 10px;
 }
-
-.footer a {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-.footer a:hover, .footer a:focus, .footer a:active {
-  color: #5C5C5C;
-}

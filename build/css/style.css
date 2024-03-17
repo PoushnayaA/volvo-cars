@@ -1754,6 +1754,11 @@ a[disabled]:hover, a[disabled]:focus, a[disabled]:active {
   color: #5C5C5C;
   margin-left: 15px;
 }
+.accordion__element .accordion .accordion__element.is-active svg {
+  -webkit-transform: rotate(-180deg) !important;
+      -ms-transform: rotate(-180deg) !important;
+          transform: rotate(-180deg) !important;
+}
 .accordion__element .accordion .accordion__list {
   border-radius: 4px;
   background-color: #F2F2F2;

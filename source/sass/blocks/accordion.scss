@@ -186,6 +186,10 @@
     }
   }
 
+  .accordion__element.is-active svg {
+    transform: rotate(-180deg) !important;
+  }
+
   .accordion__list {
     border-radius: 4px;
     background-color: $color-light-gray-2;

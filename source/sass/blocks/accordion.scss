@@ -142,21 +142,12 @@
   padding-bottom: 20px;
 }
 
-// .cookie__block .accordion__wrapper .accordion__button {
-//   &:hover,
-//   &:focus,
-//   &:active {
-//     //  {
-//       text-decoration: none !important;
-//       color: red;
-//     // }
-//   }
-// }
-
 .accordion__element .accordion {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  margin-left: 0;
+  margin-right: 0;
 
   .accordion__element {
     border-bottom: none;
@@ -167,10 +158,6 @@
       &:focus,
       &:active {
         text-decoration: none !important;
-
-        p {
-          // text-decoration: underline;
-        }
       }
     }
 
@@ -196,10 +183,7 @@
         color: $color-gray;
         margin-left: 15px;
       }
-
-
     }
-
   }
 
   .accordion__list {
@@ -212,8 +196,6 @@
     gap: 20px;
 
     li {
-    //   border-radius: 4px;
-    // background-color: $color-light-gray-2;
       div {
         display: flex;
         justify-content: space-between;

@@ -1728,6 +1728,8 @@ a[disabled]:hover, a[disabled]:focus, a[disabled]:active {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 16px;
+  margin-left: 0;
+  margin-right: 0;
 }
 .accordion__element .accordion .accordion__element {
   border-bottom: none;
